@@ -24,13 +24,18 @@ Gem::Specification.new do |spec|
   end
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.test_files = Dir["spec/**/*"]
 
   spec.add_dependency "rails", "~> 6.0.0.beta3"
+  spec.add_dependency 'activesupport'
   spec.add_dependency "mongoid"
+  spec.add_dependency 'active_model_serializers', '~> 0.10.0'
 
   spec.add_development_dependency "rspec-rails" 
   spec.add_development_dependency 'shoulda-matchers'
+  spec.add_development_dependency "mongoid-rspec"
   spec.add_development_dependency 'database_cleaner'
   spec.add_development_dependency 'capybara'
   spec.add_development_dependency 'factory_bot_rails'
+  spec.add_development_dependency 'byebug'
 end

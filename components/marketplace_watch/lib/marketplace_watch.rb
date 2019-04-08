@@ -1,3 +1,4 @@
+# require 'active_support/all'
 require "marketplace_watch/engine"
 require "mongoid" 
 
